@@ -1,0 +1,12 @@
+# Os outros arquivos irão herdar as configs deste
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}/${server.port}/eureka/
+
+spring:
+  cloud:
+    config:
+      override-system-properties: false
