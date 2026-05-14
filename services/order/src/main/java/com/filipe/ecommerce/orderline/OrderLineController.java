@@ -18,7 +18,7 @@ public class OrderLineController {
 
     @GetMapping("/order/{order-id}")
     public ResponseEntity<List<OrderLineResponse>> findByOrderId(
-            @PathVariable("order-id") Integer orderId
+            @PathVariable("order-id") Long orderId
     ) {
         return ResponseEntity.ok(service.findAllByOrderId(orderId));
     }

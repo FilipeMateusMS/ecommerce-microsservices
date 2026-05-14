@@ -1,7 +1,9 @@
 package com.filipe.ecommerce.order;
 
 import com.filipe.ecommerce.customer.CustomerClient;
-import com.filipe.ecommerce.exceptions.BusinessException;
+import com.filipe.ecommerce.exception.BusinessException;
+import com.filipe.ecommerce.kafka.OrderConfirmation;
+import com.filipe.ecommerce.kafka.OrderProducer;
 import com.filipe.ecommerce.orderline.OrderLineRequest;
 import com.filipe.ecommerce.orderline.OrderLineService;
 import com.filipe.ecommerce.product.ProductClient;
@@ -23,7 +25,7 @@ public class OrderService {
     private final CustomerClient customerClient;
     private final ProductClient productClient;
 
-    private final PaymentClient paymentClient;
+    //private final PaymentClient paymentClient;
     private final OrderLineService orderLineService;
     private final OrderProducer orderProducer;
 

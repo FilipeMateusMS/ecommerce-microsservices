@@ -1,6 +1,6 @@
 package com.filipe.ecommerce.product;
 
-import com.filipe.ecommerce.exceptions.BusinessException;
+import com.filipe.ecommerce.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
