@@ -1,4 +1,4 @@
-package com.filipe.ecommerce.exceptions;
+package com.filipe.ecommerce.exception;
 
 public class ProductPurchaseException extends RuntimeException{
     public ProductPurchaseException( String message ) {

@@ -1,8 +1,8 @@
 package com.filipe.ecommerce.product;
 
-import com.filipe.ecommerce.exceptions.ProductPurchaseException;
-import com.filipe.ecommerce.exceptions.ResourceNotFoundException;
-import jakarta.transaction.Transactional;
+import com.filipe.ecommerce.exception.ProductPurchaseException;
+import com.filipe.ecommerce.exception.ResourceNotFoundException;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +34,7 @@ public class ProductService {
                 .collect(Collectors.toList());
     }
 
-    @Transactional( rollbackFor = ProductPurchaseException.class )
+    @Transactional( rollbackFor = Exception.class )
     public List<ProductPurchaseResponse> purchaseProducts( List<ProductPurchaseRequest> request )
     {
         var productIds = request.stream()
