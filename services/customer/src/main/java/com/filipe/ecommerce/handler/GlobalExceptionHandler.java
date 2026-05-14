@@ -1,6 +1,6 @@
 package com.filipe.ecommerce.handler;
 
-import com.filipe.ecommerce.exceptions.CustomerNotFoundException;
+import com.filipe.ecommerce.exception.CustomerNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

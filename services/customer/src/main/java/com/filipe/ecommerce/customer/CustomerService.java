@@ -1,6 +1,6 @@
 package com.filipe.ecommerce.customer;
 
-import com.filipe.ecommerce.exceptions.CustomerNotFoundException;
+import com.filipe.ecommerce.exception.CustomerNotFoundException;
 import io.micrometer.common.util.StringUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
