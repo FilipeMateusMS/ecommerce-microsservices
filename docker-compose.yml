@@ -1,7 +1,7 @@
 services:
   postgresql:
     container_name: pg_db
-    image: postgres
+    image: postgres:18
     environment:
       POSTGRES_USER: user1
       POSTGRES_PASSWORD: password1
@@ -10,6 +10,7 @@ services:
     volumes:
       # Coloca para salvar fora do container, para não perder os dados quando o container é excluído
       - postgres:/var/lib/postgresql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
       - "5432:5432"
     networks:
@@ -102,6 +103,19 @@ services:
     ports:
       - 1080:1080
       - 1025:1025
+
+  keycloak:
+    container_name: keycloak
+    image: quay.io/keycloak/keycloak:24.0.2
+    ports:
+      - 9098:8080
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_password: admin
+    networks:
+      - microservices-net
+    command:
+      - "start-dev"
 
 networks:
   microservices-net:
