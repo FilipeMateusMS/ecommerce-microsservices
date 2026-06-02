@@ -1,7 +1,9 @@
 package com.filipe.ecommerce.product;
 
 import com.filipe.ecommerce.category.Category;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ProductMapper {
 
     public Product toProduct(ProductRequest request) {
