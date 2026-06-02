@@ -1,7 +1,8 @@
 package com.filipe.ecommerce.customer;
 
-import jakarta.validation.Valid;
+import org.springframework.stereotype.Component;
 
+@Component
 public class CustomerMapper {
 
     public Customer toCustomer(CustomerRequest request) {
