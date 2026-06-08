@@ -2,6 +2,11 @@
 
 Projeto desenvolvido para estudo de **Microsserviços com Spring Boot**, aplicando conceitos modernos de arquitetura distribuída, mensageria e observabilidade.
 
+## Comuniçação entre os sreviços
+<img width="1134" height="527" alt="image" src="https://github.com/user-attachments/assets/9c843ce8-ee1c-422f-9741-10e154b7f0c5" />
+
+
+
 ## 🚀 Tecnologias Utilizadas
 
 ### Backend
@@ -16,24 +21,16 @@ Projeto desenvolvido para estudo de **Microsserviços com Spring Boot**, aplican
 * Spring Eureka
 * Spring Kafka
 * Spring Mail
-
-### Bancos de Dados
-
 * PostgreSQL
 * MongoDB
-
-### Mensageria
-
 * Apache Kafka
 * Zookeeper
-
-### Observabilidade
-
 * Zipkin
-
-### Segurança
-
 * Keycloak
+
+  ## Modelagem
+  <img width="1102" height="582" alt="image" src="https://github.com/user-attachments/assets/78b9ea4f-5947-4ce5-b711-496720ad9348" />
+
 
 ### Infraestrutura
 
