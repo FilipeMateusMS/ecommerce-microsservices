@@ -139,7 +139,8 @@ docker-compose up -d
 7. Order Service
 8. Notification Service
 
-
+Página do eureka 
+http://localhost:8761/
 
 
 ⭐ Projeto desenvolvido para fins de estudo e aprendizado em arquitetura de microsserviços.
