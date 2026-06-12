@@ -1,0 +1,877 @@
+{
+  "info": {
+    "_postman_id": "f359d4db-3a0a-485e-9867-d7b118c0c1be",
+    "name": "Ecommerce-microsservice",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29967964"
+  },
+  "item": [
+    {
+      "name": "Customers",
+      "item": [
+        {
+          "name": "Find Customers",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "tokenType",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "accessToken",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "{{ACESS_TOKEN_URL}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8222/api/v1/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Customer by ID",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "tokenType",
+                  "value": "Bearer",
+                  "type": "string"
+                },
+                {
+                  "key": "accessToken",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "{{ACESS_TOKEN_URL}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8222/api/v1/customers/:customerId",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                ":customerId"
+              ],
+              "variable": [
+                {
+                  "key": "customerId",
+                  "value": "{{CUSTOMER_ID}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add Customer",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "tokenType",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "accessToken",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "{{ACESS_TOKEN_URL}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"firstname\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"email\": \"john@mail.com\",\r\n  \"address\": {\r\n    \"street\": \"Street name\",\r\n    \"houseNumber\": \"123\",\r\n    \"zipCode\": 50001\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8222/api/v1/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update customer",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "tokenType",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "accessToken",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "{{ACESS_TOKEN_URL}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": \"6a2affdb510fcfc9ac30650e\",\r\n  \"firstname\": \"John\",\r\n  \"lastName\": \"Dolar\",\r\n  \"email\": \"john@mail.com\",\r\n  \"address\": {\r\n    \"street\": \"Street name\",\r\n    \"houseNumber\": \"123\",\r\n    \"zipCode\": 50001\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8222/api/v1/customers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete customer",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "tokenType",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "accessToken",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "{{ACESS_TOKEN_URL}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8222/api/v1/customers/:customerId",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                ":customerId"
+              ],
+              "variable": [
+                {
+                  "key": "customerId",
+                  "value": "{{CUSTOMER_ID}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Exists Customer",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "tokenType",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "accessToken",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "{{ACESS_TOKEN_URL}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8222/api/v1/customers/exists/:customerId",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "customers",
+                "exists",
+                ":customerId"
+              ],
+              "variable": [
+                {
+                  "key": "customerId",
+                  "value": "6a2affdb510fcfc9ac30650e"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "Find Orders",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "tokenType",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "accessToken",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "{{ACESS_TOKEN_URL}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8222/api/v1/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "New Order",
+          "request": {
+            "auth": {
+              "type": "oauth2",
+              "oauth2": [
+                {
+                  "key": "tokenType",
+                  "value": "",
+                  "type": "string"
+                },
+                {
+                  "key": "accessToken",
+                  "value": "{{TOKEN}}",
+                  "type": "string"
+                },
+                {
+                  "key": "accessTokenUrl",
+                  "value": "{{ACESS_TOKEN_URL}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientSecret",
+                  "value": "{{CLIENT_SECRET}}",
+                  "type": "string"
+                },
+                {
+                  "key": "clientId",
+                  "value": "{{CLIENT_ID}}",
+                  "type": "string"
+                },
+                {
+                  "key": "grant_type",
+                  "value": "client_credentials",
+                  "type": "string"
+                },
+                {
+                  "key": "addTokenTo",
+                  "value": "header",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"reference\": \"MS-20241201\",\r\n  \"amount\": 900,\r\n  \"paymentMethod\": \"PAYPAL\",\r\n  \"customerId\": \"6a2affdb510fcfc9ac30650e\",\r\n  \"products\": [\r\n    {\r\n      \"productId\": 1,\r\n      \"quantity\": 1\r\n    },\r\n    {\r\n      \"productId\": 2,\r\n      \"quantity\": 1\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8222/api/v1/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Itens from Order",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8222/api/v1/order-lines/order/:order-id",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "order-lines",
+                "order",
+                ":order-id"
+              ],
+              "variable": [
+                {
+                  "key": "order-id",
+                  "value": "{{ORDER_ID}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Order by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8222/api/v1/orders/:order-id",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "orders",
+                ":order-id"
+              ],
+              "variable": [
+                {
+                  "key": "order-id",
+                  "value": "{{ORDER_ID}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Find Products By ID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8222/api/v1/products/:product-id",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "products",
+                ":product-id"
+              ],
+              "variable": [
+                {
+                  "key": "product-id",
+                  "value": "{{PRODUCT_ID}}"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find All Products",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8222/api/v1/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create Products",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Notebook Dell Inspiron 15\",\r\n  \"description\": \"Notebook com processador Intel Core i7, 16GB RAM e SSD de 512GB\",\r\n  \"availableQuantity\": 25,\r\n  \"price\": 4599.90,\r\n  \"categoryId\": 3\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8222/api/v1/products",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "products"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Buy Products",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"productId\": 10,\r\n    \"quantity\": 2\r\n  },\r\n  {\r\n    \"productId\": 15,\r\n    \"quantity\": 1\r\n  },\r\n  {\r\n    \"productId\": 20,\r\n    \"quantity\": 4\r\n  }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8222/api/v1/products/purchase",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "products",
+                "purchase"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Payment",
+      "item": [
+        {
+          "name": "Create Payment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"id\": 1,\r\n  \"amount\": 199.90,\r\n  \"paymentMethod\": \"CREDIT_CARD\",\r\n  \"orderId\": 1,\r\n  \"orderReference\": \"ORD-20260611-001\",\r\n  \"customer\": {\r\n    \"id\": \"CUST-123\",\r\n    \"firstname\": \"User\",\r\n    \"lastname\": \"developer\",\r\n    \"email\": \"user.developer@email.com\"\r\n  }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8222/api/v1/payments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8222",
+              "path": [
+                "api",
+                "v1",
+                "payments"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "refreshRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "tokenRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "authRequestParams",
+        "value": [],
+        "type": "any"
+      },
+      {
+        "key": "challengeAlgorithm",
+        "value": "S256",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "client_credentials",
+        "type": "string"
+      },
+      {
+        "key": "clientSecret",
+        "value": "{{CLIENT_SECRET}}",
+        "type": "string"
+      },
+      {
+        "key": "clientId",
+        "value": "{{CLIENT_ID}}",
+        "type": "string"
+      },
+      {
+        "key": "addTokenTo",
+        "value": "header",
+        "type": "string"
+      },
+      {
+        "key": "client_authentication",
+        "value": "header",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "{{ACESS_TOKEN_URL}}",
+        "type": "string"
+      },
+      {
+        "key": "tokenType",
+        "value": "",
+        "type": "string"
+      },
+      {
+        "key": "accessToken",
+        "value": "{{TOKEN}}",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
