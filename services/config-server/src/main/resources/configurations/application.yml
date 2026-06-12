@@ -11,6 +11,7 @@ spring:
     config:
       override-system-properties: false
 
+# 100% das requisições serão rastreadas ( 1.0 = 100%, 0.1 = 10% )
 management:
   tracing:
     sampling:

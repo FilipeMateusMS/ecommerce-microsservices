@@ -4,7 +4,7 @@ spring:
   data:
     mongodb:
       username: user1
-      password: password123
+      password: password1
       host: localhost
       port: 27017
       database: notification
@@ -22,8 +22,8 @@ spring:
   mail:
     host: localhost
     port: 1025
-    username: user1
-    password: password123
+    username: admin
+    password: admin
     properties:
       mail:
         smtp:

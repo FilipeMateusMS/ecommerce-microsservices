@@ -1,5 +1,10 @@
 ## Cria rotas automaticamente usando o Eureka (Service Discovery).
 spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "http://localhost:9098/realms/micro-services"
   cloud:
     gateway:
       discovery:
