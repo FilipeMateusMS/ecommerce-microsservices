@@ -2,14 +2,13 @@ package com.filipe.ecommerce.orderline;
 
 import com.filipe.ecommerce.order.Order;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 @Component
 public class OrderLineMapper {
     public OrderLine toOrderLine(OrderLineRequest request) {
         return OrderLine.builder()
-                .id(request.orderId())
-                .productId(request.productId())
+                .id( request.id() )
+                .productId( request.productId() )
                 .order(
                         Order.builder()
                                 .id(request.orderId())

@@ -27,6 +27,7 @@ public class Order {
     @GeneratedValue( strategy = GenerationType.IDENTITY )
     private Long id;
 
+    @Column(unique = true,  nullable = false)
     private String reference;
 
     private BigDecimal totalAmount; // preço total
