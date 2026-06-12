@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Details</title>
+    <title>Detalhes do Pedido</title>
 
     <style>
         body {
@@ -56,16 +56,17 @@
 
 <body>
 <div class="container">
-    <h1>Order Details</h1>
-    <p>Customer: <span th:text="${customerName}"></span></p>
-    <p>Order ID: <span th:text="${orderReference}"></span></p>
+    <h1>Detalhes do Pedido</h1>
+
+    <p><strong>Cliente:</strong> <span th:text="${customerName}"></span></p>
+    <p><strong>ID do Pedido:</strong> <span th:text="${orderReference}"></span></p>
 
     <table>
         <thead>
         <tr>
-            <th>Product Name</th>
-            <th>Quantity</th>
-            <th>Price</th>
+            <th>Nome do Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
         </tr>
         </thead>
         <tbody>
@@ -78,9 +79,18 @@
     </table>
 
     <div class="footer">
-        <p>Total Amount: $<span th:text="${totalAmount}"></span></p>
-        <p>This is an automated message. Please do not reply to this email.</p>
-        <p>&copy; 2026 Filipe Mateus</span>. All rights reserved.</p>
+        <p>
+            <strong>Valor Total:</strong>
+            R$ <span th:text="${totalAmount}"></span>
+        </p>
+
+        <p>
+            Esta é uma mensagem automática. Por favor, não responda este e-mail.
+        </p>
+
+        <p>
+            &copy; 2026 Filipe Mateus. Todos os direitos reservados.
+        </p>
     </div>
 </div>
 </body>
