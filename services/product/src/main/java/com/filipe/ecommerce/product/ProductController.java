@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping( "/api/v1/products")
+@RequestMapping( "/api/v1/products" )
 @RequiredArgsConstructor
 public class ProductController {
 
     private final ProductService service;
 
-    @GetMapping("/{product-id}")
+    @GetMapping("/{productId}")
     public ResponseEntity<ProductResponse> findById( @PathVariable("productId") Long productId
     ) {
         return ResponseEntity.ok( service.findById( productId ) );

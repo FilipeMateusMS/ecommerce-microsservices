@@ -11,7 +11,7 @@ create table if not exists product
     description        varchar(255) not null,
     name               varchar(255) not null unique,
     price              numeric(10,2) not null check (price >= 0),
-    available_quantity double precision not null check (available_quantity >= 0),
+    available_quantity integer not null check (available_quantity >= 0),
     category_id        bigint not null,
 
     constraint fk_product_category
