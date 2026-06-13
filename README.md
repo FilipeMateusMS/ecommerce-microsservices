@@ -142,5 +142,12 @@ docker-compose up -d
 Página do eureka 
 http://localhost:8761/
 
+Página de template para confirmação de pagamento enviado pelo serviço de notification
+<img width="1335" height="602" alt="image" src="https://github.com/user-attachments/assets/dd4eb3e0-2096-4eff-9eae-b89f6b862c53" />
+
+Email de detalhes de pedido enviado pelo serviço de notification
+<img width="1317" height="573" alt="image" src="https://github.com/user-attachments/assets/29a23bae-6be2-4cb1-b7eb-a2a41f69569b" />
+
+
 
 ⭐ Projeto desenvolvido para fins de estudo e aprendizado em arquitetura de microsserviços.
