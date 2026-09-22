@@ -2,14 +2,25 @@
 eureka:
   instance:
     hostname: localhost
+    # Intervalo para renovação do registro no Eureka
+    lease-renewal-interval-in-seconds: 5
   client:
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+      # Intervalo para atualizar o registro local de serviços
+      registry-fetch-interval-seconds: 5
 
 spring:
   cloud:
     config:
       override-system-properties: false
+    openfeign:
+      client:
+        config:
+          default:
+            # Configurações de timeout de conexão e leitura de requisições feitas pelo OpenFeign
+            connectTimeout: 2000
+            readTimeout: 5000
 
 # 100% das requisições serão rastreadas ( 1.0 = 100%, 0.1 = 10% )
 management:

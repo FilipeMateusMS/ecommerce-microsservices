@@ -2,7 +2,6 @@ package com.filipe.ecommerce.product;
 
 import com.filipe.ecommerce.exception.BusinessException;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -20,8 +19,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
 @RequiredArgsConstructor
 public class ProductClient {
 
-    @Value("${application.config.product-url}")
-    private String productUrl;
     private final RestTemplate restTemplate; // Faz conexão com o HTTP
 
     public List<PurchaseResponse> purchaseProducts( List<PurchaseRequest> requestBody ) {
@@ -32,7 +29,7 @@ public class ProductClient {
         ParameterizedTypeReference<List<PurchaseResponse>> responseType = new ParameterizedTypeReference<>() {
         };
         ResponseEntity<List<PurchaseResponse>> responseEntity = restTemplate.exchange(
-                productUrl + "/purchase",
+                "http://product-service/purchase",
                 POST,
                 requestEntity,
                 responseType

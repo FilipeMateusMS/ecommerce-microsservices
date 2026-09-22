@@ -1,6 +1,7 @@
 eureka:
   instance:
     hostname: localhost
+  # Configurações register-with-eureka e fetch-registry por padrão são true
   client:
     register-with-eureka: false
     fetch-registry: false
